@@ -1,0 +1,121 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWE209 Buse HW5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JAVASCRIPT PART  -->
+    <script>
+        // NAME AND SURNAME VALIDATION ------------------------------------------------------------
+function infoOK()
+{
+    var userName = document.getElementById('userName');
+    var userSurname = document.getElementById('userSurname');
+    var email = document.getElementById('email');
+    if (userName.value.length == 0)
+        {
+        alert("Enter your name, please");
+        return false;
+        }
+    if (userSurname.value.length == 0)
+        {
+        alert("Enter your surname, please");
+        return false;
+        }
+        if (email.value.length == 0)
+        {
+        alert("Enter your email, please");
+        return false;
+        }
+return true;
+    }
+// LAST CHECK FUNCTION ------------------------------------------------------------
+function checkForm()
+    {
+    if (infoOK() == false)
+        {
+        return;
+        }
+        document.getElementById("mainForm").submit();
+    }
+    </script>
+</head>
+<!-- UPSIDE  -->
+<body onload='load()' style="background-color: aliceblue; font-family: sans-serif;">
+    <div id="ReturnFirst">
+        <img style="margin: 20px; float: left; width: 10%;" src="http://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png" alt="DVD Shop">
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 25px; padding: 5px; font-size: 35px;"><b>DVD STORE</b></p>
+        <p style="font-family: cursive;">The Only Site Where You Can Find DVDs Of All The Greatest Movies</p>
+    </div>
+    <br><hr><br><br>
+<!-- -------------------------------------------------  -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+<!-- DVD LIST  -->
+<div style="border-style: solid; border-width:thin; width: 100%; height: auto; padding-left: 20px; margin-left: 15px; ">
+    <br>
+    <h4>DVD LIST</h4>
+    <ol>
+        <li>The Lord of the Rings</li>
+        <li>Titanic</li>
+        <li>Blade Runner</li>
+        <li>Superman</li>
+        <li>Inception</li>
+        <li>Avatar</li>
+        <li>The Lion King</li>
+        <li>Amelie</li>
+        <li>The Matrix</li>
+        <li>Forrest Gump</li>
+        <li>The Shawshank Redemption</li>
+        <li>The Godfather</li>
+    </ol>
+</div>
+<br>
+</div>
+<!-- -------------------------------------------------  -->
+<div class="col-sm-1 col-md-1 col-lg-1"></div>
+<!-- RIGHT PART  -->
+<div class="col-sm-3 col-md-3 col-lg-3">
+<!-- Adding user information to the database  -->
+<div style="border-style: solid; border-width:thin; width: 100%; height: auto; padding-left: 20px; margin-left: 15px;">
+    <br>
+<form action="http://127.0.0.1/Buse_HW5/memberLogin.php" method="POST" name="mainForm" id = "mainForm">
+    <table>
+        <tr>
+            <td>Name:</td><td><input name="userName" id="userName" /></td>
+        </tr>
+        <tr>
+            <td>Surname:</td><td><input name="userSurname" id="userSurname"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td><td><input name="email" id="email"/></td>
+        </tr>
+        <tr>
+            <td>&emsp;</td>
+            <td>&emsp;</td>
+        </tr>
+        <tr>
+            <td></td><td><input style="background-color:  rgb(154, 182, 207); border-radius: 15px; width: 140px; height: 40px;" type="button" value="LOGIN" onclick="checkForm()"/></td>
+        </tr>
+    </table>
+</form>
+</div>
+<br>
+</div>   <!-- End of the right part  -->
+<!-- -------------------------------------------------  -->
+
+<div class="col-sm-3 col-md-3 col-lg-3"></div>
+</div>   <!-- End of the row  -->
+</div>   <!-- End of the container  -->
+
+
+<!-- UNDER PART  -->
+<div>
+    <br><br><br>
+<br><br><br>
+<div style="background-color: rgb(113, 152, 187); height: 80px; width: auto; padding: 0px; margin: 0px;">
+</div>
+</div>
+</html>
