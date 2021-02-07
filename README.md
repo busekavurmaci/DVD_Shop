@@ -1,1 +1,1 @@
-It is a dvd buying site made using sqlite database, php and javascript form validation.
+It is a DVD buying site made using SQLite database, PHP, and javascript form validation.
